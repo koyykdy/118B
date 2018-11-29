@@ -12,6 +12,6 @@ with open('C:/Users/cjaik/Desktop/ASL/labeled_asl.csv',mode='w') as file:
             img = Image.open('C:/Users/cjaik/Desktop/ASL/grayed_asl/grayed_asl_train/'+str(letters[0,i])+'+/'+str(letters[0,i])+str(j+1)+'+.jpg')
             imgArray = np.array(img)
             flattened = np.ravel(imgArray)
-            incLabel = np.append(flattened,i)
+            incLabel = np.append(i,flattened)
             
             file_writer.writerow(incLabel)
